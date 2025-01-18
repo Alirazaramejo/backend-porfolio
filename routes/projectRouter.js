@@ -10,9 +10,9 @@ import { isAuthenticated } from "../middlewares/auth.js";
 
 const router = express.Router();
 
-router.post("/add", isAuthenticated, addNewProject);
-router.delete("/delete/:id", isAuthenticated, deleteProject);
-router.put("/update/:id", isAuthenticated, updateProject);
+router.post("/add", addNewProject);
+router.delete("/delete/:id", deleteProject);
+router.put("/update/:id", updateProject);
 router.get("/getall", getAllProjects);
 router.get("/get/:id", getSingleProject);
 

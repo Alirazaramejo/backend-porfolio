@@ -9,8 +9,8 @@ import { isAuthenticated } from "../middlewares/auth.js";
 
 const router = express.Router();
 
-router.post("/add", isAuthenticated, postTimeline);
-router.delete("/delete/:id", isAuthenticated, deleteTimeline);
+router.post("/add", postTimeline);
+router.delete("/delete/:id", deleteTimeline);
 router.get("/getall", getAllTimelines);
 
 export default router;
